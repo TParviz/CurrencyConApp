@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/MatchStyle">
+    <TableRow style="@style/SubKeyboardTableRowStyle">
+
+        <Button
+            style="@style/KeyboardTextStyle"
+            android:text="1"
+            android:id="@+id/btn_one"/>
+
+        <Button
+            style="@style/KeyboardTextStyle"
+            android:text="2"
+            android:id="@+id/btn_two"/>
+
+        <Button
+            style="@style/KeyboardTextStyle"
+            android:text="3"
+            android:id="@+id/btn_three"/>
+
+        <Button
+            style="@style/KeyboardTextStyle"
+            android:text="del"
+            android:id="@+id/btn_delete"/>
+    </TableRow>
+
+    <TableRow style="@style/SubKeyboardTableRowStyle">
+
+        <Button
+            style="@style/KeyboardTextStyle"
+            android:text="4"
+            android:id="@+id/btn_four"/>
+
+        <Button
+            style="@style/KeyboardTextStyle"
+            android:text="5"
+            android:id="@+id/btn_five"/>
+
+        <Button
+            style="@style/KeyboardTextStyle"
+            android:text="6"
+            android:id="@+id/btn_six"/>
+
+        <Button
+            style="@style/KeyboardTextStyle"
+            android:text=".,"
+            android:id="@+id/btn_dot"/>
+    </TableRow>
+
+    <TableRow style="@style/SubKeyboardTableRowStyle">
+
+        <Button
+            style="@style/KeyboardTextStyle"
+            android:text="7"
+            android:id="@+id/btn_seven"/>
+
+        <Button
+            style="@style/KeyboardTextStyle"
+            android:text="8"
+            android:id="@+id/btn_eight"/>
+
+        <Button
+            style="@style/KeyboardTextStyle"
+            android:text="9"
+            android:id="@+id/btn_nine"/>
+
+        <Button
+            style="@style/KeyboardTextStyle"
+            android:text="clear"
+            android:id="@+id/btn_clear" />
+    </TableRow>
+
+    <TableRow style="@style/SubKeyboardTableRowStyle">
+
+        <Button
+            style="@style/KeyboardTextStyle"
+            android:text="000"
+            android:id="@+id/btn_triple_zero"/>
+
+        <Button
+            style="@style/KeyboardTextStyle"
+            android:text="00"
+            android:id="@+id/btn_double_zero"/>
+
+        <Button
+            style="@style/KeyboardTextStyle"
+            android:text="0"
+            android:id="@+id/btn_zero"/>
+    </TableRow>
+
+
+
+
+
+
+
+</TableLayout>
