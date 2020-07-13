@@ -6,19 +6,20 @@
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     app:contentPadding="1dp"
-    app:cardElevation="3dp"
-    app:cardCornerRadius="3dp"
+    app:cardElevation="1dp"
+    app:cardCornerRadius="8dp"
     android:layout_marginLeft="16dp"
     android:layout_marginRight="16dp"
 
     android:orientation="vertical"
     android:id="@+id/first_card_main_page"
-    app:cardBackgroundColor="#007cce">
+    >
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
+        android:background="@drawable/whiteframestyle"
        >
 
 
@@ -26,11 +27,8 @@
             android:id="@+id/first_country_flags"
             android:layout_width="150dp"
             android:layout_height="100dp"
-            android:layout_marginStart="1dp"
-            android:layout_marginLeft="1dp"
-            android:layout_marginEnd="1dp"
-            android:layout_marginRight="1dp"
-            android:src="@drawable/usa3" />
+
+            android:src="@drawable/usa4" />
 
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -45,10 +43,11 @@
                 android:layout_alignParentTop="true"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="16dp"
+                android:fontFamily="@font/russo_one"
                 android:text="USD"
                 android:textAlignment="center"
                 android:textColor="#000000"
-                android:textSize="22sp"
+                android:textSize="16sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -59,12 +58,12 @@
                 android:layout_alignParentTop="true"
                 android:layout_marginTop="16dp"
                 android:layout_toEndOf="@+id/first_charcode_text"
+                android:fontFamily="@font/russo_one"
                 android:text="Доллар США"
                 android:textAlignment="center"
                 android:textColor="#000000"
-                android:textSize="22sp"
+                android:textSize="16sp"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.396"
                 app:layout_constraintStart_toEndOf="@+id/first_charcode_text"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -75,14 +74,14 @@
                 android:layout_below="@+id/first_name_text"
                 android:layout_alignParentStart="true"
                 android:layout_alignParentBottom="true"
-                android:layout_marginTop="12dp"
-                android:gravity="center_horizontal"
-                android:text="65,65"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/abril_fatface"
+                android:text="103,442"
                 android:textAlignment="center"
-                android:textColor="#000000"
-                android:textSize="24sp"
+                android:textColor="#0d4a6f"
+                android:textSize="28sp"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.497"
+                app:layout_constraintHorizontal_bias="0.406"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/first_name_text" />
         </androidx.constraintlayout.widget.ConstraintLayout>

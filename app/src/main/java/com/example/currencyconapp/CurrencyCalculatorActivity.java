@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.text.Editable;
 import android.text.InputType;
 import android.text.TextWatcher;
+import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.WindowManager;
@@ -16,6 +17,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.TextView;
 
@@ -25,12 +27,16 @@ import androidx.appcompat.app.AppCompatActivity;
 import org.w3c.dom.Text;
 
 import java.text.DecimalFormat;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.regex.Pattern;
 
-public class CurrencyCalculator extends AppCompatActivity {
+public class CurrencyCalculatorActivity extends AppCompatActivity {
 
-    String[] data = {"Афганский Афган", "Армянский Драм", "Беларусский Рубль", "Датский Крон", "Британский Фунт"};
-    String[] data1 = {"Афганский Афган", "Армянский Драм", "Беларусский Рубль", "Датский Крон", "Британский Фунт"};
+    List<Valute> dataset;
+
+
+    // String[] data1 = {"Афганский Афган", "Армянский Драм", "Беларусский Рубль", "Датский Крон", "Британский Фунт"};
     Button btnone;
     Button btntwo;
     Button btnthree;
@@ -48,9 +54,7 @@ public class CurrencyCalculator extends AppCompatActivity {
     Button btnzero;
     EditText txtInput;
     TextView txtOutput;
-
-
-
+    ImageView image;
 
 
     View view = this.getCurrentFocus();
@@ -67,9 +71,16 @@ public class CurrencyCalculator extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.calculator_layout);
 
+        String[] valuteNames = getIntent().getStringArrayExtra("valuteNamesList");
 
+        ArrayAdapter<String> adapter1 = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, valuteNames);
+        adapter1.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+
+        Spinner spinner1 = (Spinner) findViewById(R.id.spinner_two);
+        spinner1.setAdapter(adapter1);
 
         btnone = (Button) findViewById(R.id.btn_one);
+        image = (ImageView) findViewById(R.id.second_image_converter_layout);
         btntwo = (Button) findViewById(R.id.btn_two);
         btnthree = (Button) findViewById(R.id.btn_three);
         btnfour = (Button) findViewById(R.id.btn_four);
@@ -103,14 +114,13 @@ public class CurrencyCalculator extends AppCompatActivity {
 
                 if (txtInput.getText().length() > 0) {
                     valuteInt = Float.valueOf(txtInput.getText().toString());
+
                 }
                 if (valuteInt > 0) {
                     txtOutput.setText(Float.toString(valuteInt * 69.78f));
                 }
             }
         });
-
-
 
 
         btnone.setOnClickListener(new View.OnClickListener() {
@@ -200,11 +210,14 @@ public class CurrencyCalculator extends AppCompatActivity {
         });
 
 
-
+        /*Log.d("SHOW ITEMS NAME", "" + dataset.toString());
+        List<String> names = new ArrayList();
+        names.add(valute.getName());
+        Log.d("SHOW ITEMS NAME", "" + valute);*/
 
         // адаптер
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, data);
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        /*ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, data);
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);*/
 
 
         if (view != null) {
@@ -220,32 +233,6 @@ public class CurrencyCalculator extends AppCompatActivity {
         InputMethodManager imm = (InputMethodManager) getSystemService(Activity.INPUT_METHOD_SERVICE);
         imm.toggleSoftInput(InputMethodManager.HIDE_IMPLICIT_ONLY, 0);
 
-        Spinner spinner = (Spinner) findViewById(R.id.spinner_one);
-        spinner.setAdapter(adapter);
-
-        // заголовок
-        spinner.setPrompt("USD - Доллар США");
-        // выделяем элемент
-        spinner.setSelection(2);
-        // устанавливаем обработчик нажатия
-        spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-            @Override
-            public void onItemSelected(AdapterView<?> parent, View view,
-                                       int position, long id) {
-                // показываем позиция нажатого элемента
-
-            }
-
-            @Override
-            public void onNothingSelected(AdapterView<?> arg0) {
-            }
-        });
-
-        ArrayAdapter<String> adapter1 = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, data1);
-        adapter1.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-
-        Spinner spinner1 = (Spinner) findViewById(R.id.spinner_two);
-        spinner1.setAdapter(adapter1);
 
         // заголовок
         spinner1.setPrompt("USD - Доллар США");
@@ -257,6 +244,11 @@ public class CurrencyCalculator extends AppCompatActivity {
             public void onItemSelected(AdapterView<?> parent, View view,
                                        int position, long id) {
 
+                String selectedName = parent.getSelectedItem().toString();
+                Log.d("SELECTED_NAME", "" + selectedName);
+                if (selectedName.equals("Доллари ИМА")) {
+                    image.setImageResource(R.drawable.england);
+                }
 
             }
 

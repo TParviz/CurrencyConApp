@@ -39,13 +39,10 @@
 
             <ImageView
                 android:id="@+id/first_image_converter_layout"
-                android:layout_width="100dp"
+                android:layout_width="90dp"
                 android:layout_height="100dp"
-                android:layout_marginStart="1dp"
-                android:layout_marginLeft="1dp"
-                android:layout_marginEnd="1dp"
-                android:layout_marginRight="1dp"
-                android:src="@drawable/usa" />
+
+                android:src="@drawable/tajikistan" />
 
 
             <androidx.constraintlayout.widget.ConstraintLayout
@@ -53,7 +50,7 @@
                 android:layout_height="match_parent">
 
 
-                <Spinner
+                <!--<Spinner
                     android:id="@+id/spinner_one"
                     android:layout_width="wrap_content"
                     android:layout_height="30dp"
@@ -62,7 +59,20 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.6"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
+                    app:layout_constraintTop_toTopOf="parent" />-->
+
+                <TextView
+                    android:id="@+id/tjk_input"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:textSize="16dp"
+                    android:text="Сомонии Точикистон"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:textColor="#000000"
+                    android:fontFamily="@font/russo_one"/>
 
                 <EditText
                     android:id="@+id/txt_input"
@@ -74,8 +84,9 @@
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/spinner_one"
-                    app:layout_constraintVertical_bias="0.407" />
+                    app:layout_constraintTop_toBottomOf="@+id/tjk_input"
+                    app:layout_constraintVertical_bias="0.407"
+                    android:fontFamily="@font/abril_fatface"/>
 
 
             </androidx.constraintlayout.widget.ConstraintLayout>
@@ -105,15 +116,11 @@
                 android:id="@+id/second_image_converter_layout"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
-                android:layout_marginStart="1dp"
-                android:layout_marginLeft="1dp"
-                android:layout_marginEnd="1dp"
-                android:layout_marginRight="1dp"
                 android:src="@drawable/turkey" />
 
 
             <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="268dp"
+                android:layout_width="261dp"
                 android:layout_height="match_parent">
 
 
@@ -121,10 +128,10 @@
                     android:id="@+id/spinner_two"
                     android:layout_width="wrap_content"
                     android:layout_height="30dp"
-                    android:layout_marginTop="8dp"
+                    android:layout_marginTop="4dp"
                     android:contextClickable="true"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.6"
+                    app:layout_constraintHorizontal_bias="0.636"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
@@ -133,9 +140,10 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:background="@null"
+                    android:fontFamily="@font/abril_fatface"
                     android:text="102970,50"
-                    android:textSize="22dp"
                     android:textColor="#000000"
+                    android:textSize="22dp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.503"

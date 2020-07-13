@@ -4,13 +4,13 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    app:contentPadding="5dp"
-    app:cardElevation="3dp"
-    app:cardCornerRadius="3dp"
+
+    app:cardElevation="1dp"
+    app:cardCornerRadius="4dp"
     app:cardUseCompatPadding="true"
     android:orientation="vertical"
     android:id="@+id/card_view"
-    app:cardBackgroundColor="#eee9e9">
+    app:cardBackgroundColor="#ffffff">
 
 
     <LinearLayout
@@ -22,73 +22,85 @@
         android:layout_marginEnd="1dp"
         android:layout_marginRight="1dp"
         android:orientation="horizontal"
-        android:padding="5dp">
+        android:padding="4dp"
+        android:background="@drawable/frametextstyle">
 
 
         <ImageView
             android:id="@+id/country_flags"
             android:layout_width="80dp"
             android:layout_height="80dp"
-            android:layout_marginStart="1dp"
-            android:layout_marginLeft="1dp"
-            android:layout_marginEnd="1dp"
-            android:layout_marginRight="1dp"
-            android:src="@drawable/europa" />
+
+            android:src="@drawable/thailand" />
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="80dp"
+            android:layout_height="100dp"
             android:orientation="vertical">
 
+
             <TextView
+
                 android:id="@+id/charcode_text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignParentStart="true"
                 android:layout_alignParentTop="true"
-                android:layout_marginStart="16dp"
-                android:layout_marginLeft="5dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="4dp"
                 android:layout_marginTop="8dp"
-                android:layout_marginEnd="1dp"
-                android:layout_marginRight="5dp"
+                android:layout_marginRight="4dp"
+                android:layout_toEndOf="@+id/nominal_text"
                 android:text="USD"
                 android:textAlignment="center"
                 android:textColor="#000000"
-                android:textSize="18sp" />
+                android:textSize="18sp"
+                android:fontFamily="@font/russo_one"/>
 
+            <TextView
+                android:id="@+id/equal_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_toEndOf="@+id/charcode_text"
+                android:text="="
+                android:textSize="18sp"
+                android:fontFamily="@font/russo_one"/>
 
             <TextView
                 android:id="@+id/nominal_text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
                 android:layout_alignParentTop="true"
                 android:layout_marginStart="16dp"
-                android:layout_marginLeft="5dp"
+                android:layout_marginLeft="4dp"
                 android:layout_marginTop="8dp"
-                android:layout_marginEnd="1dp"
-                android:layout_marginRight="5dp"
+                android:layout_marginRight="4dp"
                 android:layout_marginBottom="1dp"
-                android:layout_toEndOf="@+id/charcode_text"
                 android:text="1 $ = "
                 android:textAlignment="center"
                 android:textColor="#000000"
-                android:textSize="18sp" />
+                android:textSize="18sp"
+                android:fontFamily="@font/russo_one"/>
 
             <TextView
                 android:id="@+id/value_text"
-                android:layout_width="100dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentTop="true"
-                android:layout_marginStart="36dp"
+                android:layout_marginStart="8dp"
                 android:layout_marginLeft="4dp"
                 android:layout_marginTop="8dp"
-                android:layout_marginRight="5dp"
+                android:layout_marginRight="4dp"
                 android:layout_marginBottom="4dp"
-                android:layout_toEndOf="@+id/nominal_text"
+                android:layout_toEndOf="@+id/equal_text"
                 android:text="10.4750"
                 android:textAlignment="center"
                 android:textColor="#000000"
-                android:textSize="18sp" />
+                android:textSize="18sp"
+                android:fontFamily="@font/russo_one"/>
 
             <TextView
                 android:id="@+id/name_text"
@@ -96,36 +108,41 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/nominal_text"
                 android:layout_alignParentStart="true"
-                android:layout_alignParentBottom="true"
+                android:layout_alignParentEnd="true"
                 android:layout_marginStart="16dp"
-                android:layout_marginLeft="5dp"
-                android:layout_marginTop="16dp"
-                android:layout_marginRight="5dp"
-                android:layout_marginBottom="4dp"
+                android:layout_marginLeft="4dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="30dp"
+                android:layout_marginRight="4dp"
+                android:fontFamily="@font/russo_one"
+                android:gravity="left"
                 android:text="Доллар США"
-                android:textAlignment="center"
                 android:textColor="#000000"
-                android:textSize="18sp" />
+                android:textSize="14sp" />
 
             <TextView
                 android:id="@+id/date_text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/value_text"
+                android:layout_below="@+id/name_text"
+                android:layout_alignParentEnd="true"
                 android:layout_alignParentBottom="true"
-                android:layout_marginStart="24dp"
-                android:layout_marginLeft="5dp"
-                android:layout_marginTop="12dp"
-                android:layout_marginRight="5dp"
-                android:layout_marginBottom="4dp"
-                android:layout_toEndOf="@+id/name_text"
+                android:layout_marginLeft="4dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginEnd="30dp"
+                android:layout_marginRight="4dp"
+                android:layout_marginBottom="8dp"
+                android:fontFamily="@font/russo_one"
                 android:text="18.06.2020"
                 android:textAlignment="center"
                 android:textColor="#000000"
-                android:textSize="18sp" />
-
+                android:textSize="10sp" />
         </RelativeLayout>
 
     </LinearLayout>
+
+
+
+
 </androidx.cardview.widget.CardView>
 
