@@ -74,19 +74,20 @@
                     android:textColor="#000000"
                     android:fontFamily="@font/russo_one"/>
 
-                <EditText
-                    android:id="@+id/txt_input"
+                <TextView
+                    android:id="@+id/txt_output"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:background="@null"
-                    android:text="1500"
+                    android:fontFamily="@font/abril_fatface"
+                    tools:text="1500"
                     android:textSize="22dp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.502"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/tjk_input"
-                    app:layout_constraintVertical_bias="0.407"
-                    android:fontFamily="@font/abril_fatface"/>
+                    app:layout_constraintVertical_bias="0.542" />
 
 
             </androidx.constraintlayout.widget.ConstraintLayout>
@@ -135,13 +136,13 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
-                <TextView
-                    android:id="@+id/txt_output"
+                <EditText
+                    android:id="@+id/txt_input"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:background="@null"
                     android:fontFamily="@font/abril_fatface"
-                    android:text="102970,50"
+                    tools:text="102970,50"
                     android:textColor="#000000"
                     android:textSize="22dp"
                     app:layout_constraintBottom_toBottomOf="parent"
